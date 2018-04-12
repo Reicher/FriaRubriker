@@ -1,0 +1,78 @@
+<!DOCTYPE >
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Fria rubriker</title>
+    <style>
+      body {
+      background: #AAE;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      }
+      #title{
+      font-size: 3vw;
+      }
+      span{
+      color: red;
+      }
+      .button{
+      display: inline-block;
+      padding: 1vw;
+      margin-top: 20vh;
+      font-size: 1vw;
+      background: #E55;
+      cursor: pointer;
+      color: white;
+      border-bottom: thick solid #700;
+      }
+      .button:hover{
+      background: #F33;
+      }
+      .button:active{
+      background: #C00;
+      }
+      a{
+      display: block;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      font-weight: normal;
+      padding: 0.5vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="title"><span> Besketed:</span> Leif GW skakad av skrämmande sjukdomen</div>
+    <div class="button" onclick="generateTitle()">Generera ny rubrik</div>
+    <a href="https://www.reddit.com/r/sweden/comments/8bgqqx/enkla_metoden_5_steg_till_bra_journalistik_h%C3%A4r_%C3%A4r/dx7gr5o/">Inspirerat av redditörs kommentar</a>
+    <a href="https://www.reddit.com/r/sweden/comments/8bgqqx/enkla_metoden_5_steg_till_bra_journalistik_h%C3%A4r_%C3%A4r/">som inspirerades av reddit-tråd</a>
+
+
+    <script>
+      var words = [["Avslöjar:", "Skakig mobilkamera:", "Chocken:", "Folkets fiende:", "KAOSET:", "Sveket:", "Mardrömmen:", "Skräcken:", "Uppgifter inatt:", "Maktmissbruket:", "Systemkolapsen:"],
+      ["Kakan Hermansson", "Muslimer", "Islamisterna", "Miljöpartiet", "Kända feministen", "Hemlig källa", "Conny, 54", "Facket", "Sjuklövern", "Romerna", "Judarna", "Vänsterpartiet", "Stefan Löfven", "AFA", "Asylsökanden", "Muhammed", "SVT"],
+      ["hyllar", "bagatelliserar", "feminiserar", "mörkar", "tystar ned", "talar ut om", "uppmuntrar", "glädjs av", "islamiserar", "uppskattar", "stöttade"],
+      ["feministiska", "ryska", "otroliga", "hemliga", "odemokratiska", "livsfarliga", "osannolika", "galna", "förödande", "omtalade", "skrämmande", "okulta", "naiva"],
+      ["sharialagarna", "osvenska värden", "kommunististsympatisören", "tiggarligan", "Pridefestivalen", "Straffkalan", "våldtäkten", "våldtäkten", "våldtäkten", "regeringskrisen"]];
+
+      var titleElement = document.getElementById("title");
+
+      function generateTitle(){
+      var result = "<span>";
+        for (let i = 0; i < words.length; i++) {
+			    result += " " + words[i][Math.floor((Math.random() * words[i].length))];
+			    if(i == 0) result += "</span>";
+			    }
+			    titleElement.innerHTML = result;
+			    }
+
+			    generateTitle();
+			    </script>
+
+</body></html>
