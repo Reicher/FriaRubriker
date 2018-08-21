@@ -1,0 +1,44 @@
+
+body {
+    background: #AAE;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10;
+}
+#title{
+    font-size: 3vw;
+}
+span{
+    color: red;
+}
+.button{
+    display: inline-block;
+    padding: 1vw;
+    margin-top: 20vh;
+    font-size: 1vw;
+    background: #E55;
+    cursor: pointer;
+    color: white;
+    border-bottom: thick solid #700;
+}
+.button:hover{
+    background: #F33;
+}
+.button:active{
+    background: #C00;
+}
+a{
+    font-weight: normal;
+    white-space: nowrap;
+}
